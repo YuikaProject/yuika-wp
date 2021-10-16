@@ -1,1 +1,2 @@
-# Yuika Get WP Post
+# Yuika WP
+唯香 -ゆいか- とWordPressサイトの連携をできるようにするプラグイン。
