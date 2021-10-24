@@ -95,13 +95,29 @@ function ykapi_add_ep()
 
     foreach ($api_endpoints as $endpoint => $callback) {
         register_rest_route(
-            "/yuika",
+            "yuika",
             "/" . $endpoint,
             array(
                 "methods" => "GET",
-                "callback" => $callback
+                "callback" => $callback,
+                "permission_callback" => function () {
+                    return true;
+                }
             )
         );
     }
+/*
+    register_rest_route(
+        "yuika",
+        '/search/(?P<keywords>.*?("|$)|((?<=[\t ",+])|^)[^\t ",+]+)',
+        array(
+            "methods" => "GET",
+            "callback" => "ykapi_search_posts",
+            "permission_callback" => function () {
+                return true;
+            }
+        )
+    );
+    */
 }
 add_action("rest_api_init", "ykapi_add_ep");

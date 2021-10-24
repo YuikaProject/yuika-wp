@@ -38,7 +38,7 @@ function ykwp_display_plugin_sub_page()
                 <?php
                 if (is_plugin_active("search-exclude/search-exclude.php")) { ?>
                     <h3>Search Exclude プラグイン連携</h3>
-                    <p>チェックを入れることで、一覧表示や検索時に「Search Exclude」プラグインで非表示に設定した投稿を非表示にできます。</p>
+                    <p>チェックを入れることで、一覧表示や検索時に「<a href="https://ja.wordpress.org/plugins/search-exclude/">Search Exclude</a>」プラグインで非表示に設定した投稿を非表示にできます。<br><b>この変更は「投稿一覧表示」「サイト検索」のどちらでも有効です。</b></p>
                     <tr>
                         <input name="yuikawp_config[sync-search-exclude-tf]" type="hidden" value="false" />
                         <td><label><input name="yuikawp_config[sync-search-exclude-tf]" type="checkbox" id="sync-search-exclude-tf" value="true" <?php checked(@get_ykwp_opt("sync-search-exclude-tf"), "true"); ?> /> 連携する</label></td>
@@ -48,7 +48,7 @@ function ykwp_display_plugin_sub_page()
                 ?>
 
                 <h3>表示する投稿タイプ</h3>
-                <p>チェックを入れた投稿タイプのみ、一覧表示されます。</p>
+                <p>チェックを入れた投稿タイプのみ、一覧表示されます。<br><b>この変更は「サイト検索」のみ有効です。</b></p>
                 <tr>
                     <?php
                     $post_types = get_post_types(array("public" => true));
@@ -62,6 +62,9 @@ function ykwp_display_plugin_sub_page()
                     }
                     ?>
                 </tr>
+
+                <h3>使い方にお困りですか？</h3>
+                <p>詳しくは、<a href="https://yuika.ayutsuki.net/post/tips/yuika-wp-plugin/">こちらの記事</a>で解説しています。<br>また、<a href="https://yuika.ayutsuki.net/support">サポートサーバー</a>でも質問を受け付けております！</p>
 
                 <?php submit_button(); ?>
             </form>
