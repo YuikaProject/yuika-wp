@@ -3,7 +3,4 @@
 
 ## How to Use
 
-各種設定は、専用メニューから行います。<br>
-URLは「{サイトURL}/wp-admin/wp-admin/tools.php?page=yuikawp_config」です。
-
-### API有効化
+こちらの記事をご覧ください: https://yuika.ayutsuki.net/post/tips/yuika-wp-plugin/
