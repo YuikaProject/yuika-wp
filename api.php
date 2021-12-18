@@ -43,7 +43,8 @@ function ykapi_get_siteinfo()
         "description" => get_bloginfo("description"),
         "home_url" => home_url(),
         "description" => get_bloginfo("description"),
-        "favicon" => get_site_icon_url()
+        "favicon" => get_site_icon_url(),
+        "version" => get_ykwp_version()
     );
     return $result;
 }
@@ -79,7 +80,7 @@ function ykapi_search_posts($parameter)
         );
         array_push($result, $data);
     };
-
+    
     return $result;
 }
 
@@ -106,18 +107,5 @@ function ykapi_add_ep()
             )
         );
     }
-/*
-    register_rest_route(
-        "yuika",
-        '/search/(?P<keywords>.*?("|$)|((?<=[\t ",+])|^)[^\t ",+]+)',
-        array(
-            "methods" => "GET",
-            "callback" => "ykapi_search_posts",
-            "permission_callback" => function () {
-                return true;
-            }
-        )
-    );
-    */
 }
 add_action("rest_api_init", "ykapi_add_ep");

@@ -2,6 +2,7 @@
 
 if (!defined("ABSPATH")) exit;
 
+
 function ykwp_add_settings_main()
 {
     add_submenu_page("tools.php", "Yuika Get WP Post API Settings", "Yuika WP", "administrator", "yuikawp_config", "ykwp_display_plugin_sub_page");
@@ -64,7 +65,9 @@ function ykwp_display_plugin_sub_page()
                 </tr>
 
                 <h3>使い方にお困りですか？</h3>
-                <p>詳しくは、<a href="https://yuika.ayutsuki.net/post/tips/yuika-wp-plugin/">こちらの記事</a>で解説しています。<br>また、<a href="https://yuika.ayutsuki.net/support">サポートサーバー</a>でも質問を受け付けております！</p>
+                <p>詳しくは、<a href="https://yuika-bot.com/post/yuika-wp/api-setting/" target="_blank" rel="noopener noreferrer">こちらの記事</a>で解説しています。<br>また、<a href="https://yuika-bot.com/support" target="_blank" rel="noopener noreferrer">サポートサーバー</a>でも質問を受け付けております！</p>
+
+                <p style="text-align: right">Yuika WP <?php echo get_ykwp_version(); ?></p>
 
                 <?php submit_button(); ?>
             </form>

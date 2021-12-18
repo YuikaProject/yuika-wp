@@ -2,9 +2,9 @@
 
 /*
 Plugin Name: Yuika WP
-Plugin URI: https://yuika.ayutsuki.net/post/tips/yuika-wp-plugin/
+Plugin URI: https://yuika-bot.com/yuika-wp/
 Description: 唯香 -ゆいか- とWordPressサイトの連携をできるようにするプラグイン。
-Version: 1.0.0
+Version: 1.0.1
 Author: 鮎月 -Liteyan-
 Author URI: https://ayutsuki.net/
 License: GPL3
@@ -20,7 +20,7 @@ foreach ($files as $file_name) {
 
 require $ykwp . "plugin-update-checker/plugin-update-checker.php";
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	"http://forum.yuika.ayutsuki.net/yuika-wp/version.json",
+	"http://forum.yuika-bot.com/yuika-wp/version.json",
 	__FILE__,
 	"yuika-wp"
 );
