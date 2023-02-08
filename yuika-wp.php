@@ -4,7 +4,7 @@
 Plugin Name: Yuika WP
 Plugin URI: https://yuika-bot.com/yuika-wp/
 Description: 唯香 -ゆいか- とWordPressサイトの連携をできるようにするプラグイン。
-Version: 1.0.1
+Version: 1.0.2
 Author: 鮎月 -Liteyan-
 Author URI: https://ayutsuki.net/
 License: GPL3
